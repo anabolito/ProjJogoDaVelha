@@ -21,13 +21,13 @@
         for (rodada = 1; rodada <= 9; rodada++)
         {
 
-            //if (rodada < 5)
-            //{
-            //    MostrarTabuleiro();
-            //    EscolherPosicao(posicao);
-            //}
-            //else
-            //{
+            if (rodada < 5)
+            {
+                MostrarTabuleiro();
+                EscolherPosicao(posicao);
+            }
+            else
+            {
                 while (vitoria == false)
                 {
                     MostrarTabuleiro();
@@ -38,7 +38,7 @@
                         MostrarTabuleiro();
                     }
                 }
-           // }
+            }
             if (rodada == 9 && vitoria == false)
             {
                 Console.WriteLine(" Deu velha!");
