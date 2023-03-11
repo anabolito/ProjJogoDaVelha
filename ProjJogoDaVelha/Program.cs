@@ -17,7 +17,8 @@
         jogo[2, 1] = 'H';
         jogo[2, 2] = 'I';
 
-        Console.WriteLine(" ##### JOGO DA VELHA ##### \n ");
+        Console.WriteLine("  #### JOGO DA VELHA #####  \n");
+        Console.WriteLine(" Um jogador por vez, sendo que o primeiro será o Xis(X) e o outro será Bolinha (O), irá escolher uma posição \nno tabuleiro, se algum dos dois conseguir completar uma coluna inteira, ou linha, ou diagonal, vencerá o jogo :) \n\n\n\n\n");
 
         for (rodada = 1; rodada <= 9; rodada++)
         {
@@ -36,7 +37,7 @@
                     Console.WriteLine();
                     if (VerificarVitoria())
                     {
-                        Console.WriteLine(xOuO + " ganhou! \n");
+                        Console.WriteLine(" Jogador " + xOuO + " ganhou! \n");
                         MostrarTabuleiro();
                     }
                 }
@@ -74,11 +75,11 @@
 
         void MostrarTabuleiro()
         {
-            Console.WriteLine($"{jogo[0, 0]} | {jogo[0, 1]} | {jogo[0, 2]}");
-            Console.WriteLine("----------");
-            Console.WriteLine($"{jogo[1, 0]} | {jogo[1, 1]} | {jogo[1, 2]}");
-            Console.WriteLine("----------");
-            Console.WriteLine($"{jogo[2, 0]} | {jogo[2, 1]} | {jogo[2, 2]}");
+            Console.WriteLine($"    {jogo[0, 0]} | {jogo[0, 1]} | {jogo[0, 2]}");
+            Console.WriteLine("    ----------");
+            Console.WriteLine($"    {jogo[1, 0]} | {jogo[1, 1]} | {jogo[1, 2]}");
+            Console.WriteLine("    ----------");
+            Console.WriteLine($"    {jogo[2, 0]} | {jogo[2, 1]} | {jogo[2, 2]}");
         }
 
         char TrocarPeca(int rodada)
