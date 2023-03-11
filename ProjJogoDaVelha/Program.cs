@@ -17,24 +17,26 @@
         jogo[2, 1] = 'H';
         jogo[2, 2] = 'I';
 
+        Console.WriteLine(" ##### JOGO DA VELHA ##### \n ");
 
         for (rodada = 1; rodada <= 9; rodada++)
         {
-
             if (rodada < 5)
             {
                 MostrarTabuleiro();
                 EscolherPosicao(posicao);
+                Console.WriteLine();
             }
             else
             {
-                while (vitoria == false)
+                if (vitoria == false)
                 {
                     MostrarTabuleiro();
                     EscolherPosicao(posicao);
+                    Console.WriteLine();
                     if (VerificarVitoria())
                     {
-                        Console.WriteLine(xOuO + " ganhou!");
+                        Console.WriteLine(xOuO + " ganhou! \n");
                         MostrarTabuleiro();
                     }
                 }
@@ -45,7 +47,7 @@
                 MostrarTabuleiro();
                 Console.ReadKey();
             }
-            
+
         }
 
 
@@ -90,7 +92,7 @@
 
         char[,] EscolherPosicao(char posicao)
         {
-            Console.Write("\nEscolha uma posição: ");
+            Console.Write($"\nEscolha uma posição: \n");
             posicao = char.Parse(Console.ReadLine().ToUpper());
 
             switch (posicao)
@@ -98,7 +100,7 @@
                 case 'A':
                     if (jogo[0, 0] == 'X' || jogo[0, 0] == 'O')
                     {
-                        Console.WriteLine("O local ja tem valor, digite outro.");
+                        Console.WriteLine("Posição já preenchida, digite outra.");
                         EscolherPosicao(posicao);
                     }
 
@@ -109,7 +111,7 @@
                 case 'B':
                     if (jogo[0, 1] == 'X' || jogo[0, 1] == 'O')
                     {
-                        Console.WriteLine("O local ja tem valor, digite outro.");
+                        Console.WriteLine("Posição já preenchida, digite outra.");
                         EscolherPosicao(posicao);
                     }
 
