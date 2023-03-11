@@ -21,13 +21,13 @@
         for (rodada = 1; rodada <= 9; rodada++)
         {
 
-            if (rodada < 5)
-            {
-                MostrarTabuleiro();
-                EscolherPosicao(posicao);
-            }
-            else
-            {
+            //if (rodada < 5)
+            //{
+            //    MostrarTabuleiro();
+            //    EscolherPosicao(posicao);
+            //}
+            //else
+            //{
                 while (vitoria == false)
                 {
                     MostrarTabuleiro();
@@ -38,6 +38,12 @@
                         MostrarTabuleiro();
                     }
                 }
+           // }
+            if (rodada == 9 && vitoria == false)
+            {
+                Console.WriteLine(" Deu velha!");
+                MostrarTabuleiro();
+                Console.ReadKey();
             }
             
         }
@@ -84,7 +90,7 @@
 
         char[,] EscolherPosicao(char posicao)
         {
-            Console.Write("Escolha uma posição: ");
+            Console.Write("\nEscolha uma posição: ");
             posicao = char.Parse(Console.ReadLine().ToUpper());
 
             switch (posicao)
@@ -101,7 +107,7 @@
                     break;
 
                 case 'B':
-                    if (jogo[0, 1] == 'X' || jogo[0, 0] == 'O')
+                    if (jogo[0, 1] == 'X' || jogo[0, 1] == 'O')
                     {
                         Console.WriteLine("O local ja tem valor, digite outro.");
                         EscolherPosicao(posicao);
@@ -112,7 +118,7 @@
                     break;
 
                 case 'C':
-                    if (jogo[0, 2] == 'X' || jogo[0, 0] == 'O')
+                    if (jogo[0, 2] == 'X' || jogo[0, 2] == 'O')
                     {
                         Console.WriteLine("O local ja tem valor, digite outro.");
                         EscolherPosicao(posicao);
@@ -123,7 +129,7 @@
                     break;
 
                 case 'D':
-                    if (jogo[1, 0] == 'X' || jogo[0, 0] == 'O')
+                    if (jogo[1, 0] == 'X' || jogo[1, 0] == 'O')
                     {
                         Console.WriteLine("O local ja tem valor, digite outro.");
                         EscolherPosicao(posicao);
@@ -134,7 +140,7 @@
                     break;
 
                 case 'E':
-                    if (jogo[1, 1] == 'X' || jogo[0, 0] == 'O')
+                    if (jogo[1, 1] == 'X' || jogo[1, 1] == 'O')
                     {
                         Console.WriteLine("O local ja tem valor, digite outro.");
                         EscolherPosicao(posicao);
@@ -145,7 +151,7 @@
                     break;
 
                 case 'F':
-                    if (jogo[1, 2] == 'X' || jogo[0, 0] == 'O')
+                    if (jogo[1, 2] == 'X' || jogo[1, 2] == 'O')
                     {
                         Console.WriteLine("O local ja tem valor, digite outro.");
                         EscolherPosicao(posicao);
@@ -156,7 +162,7 @@
                     break;
 
                 case 'G':
-                    if (jogo[2, 0] == 'X' || jogo[0, 0] == 'O')
+                    if (jogo[2, 0] == 'X' || jogo[2, 0] == 'O')
                     {
                         Console.WriteLine("O local ja tem valor, digite outro.");
                         EscolherPosicao(posicao);
@@ -167,7 +173,7 @@
                     break;
 
                 case 'H':
-                    if (jogo[2, 1] == 'X' || jogo[0, 0] == 'O')
+                    if (jogo[2, 1] == 'X' || jogo[2, 1] == 'O')
                     {
                         Console.WriteLine("O local ja tem valor, digite outro.");
                         EscolherPosicao(posicao);
@@ -178,7 +184,7 @@
                     break;
 
                 case 'I':
-                    if (jogo[2, 2] == 'X' || jogo[0, 0] == 'O')
+                    if (jogo[2, 2] == 'X' || jogo[2, 2] == 'O')
                     {
                         Console.WriteLine("O local ja tem valor, digite outro.");
                         EscolherPosicao(posicao);
