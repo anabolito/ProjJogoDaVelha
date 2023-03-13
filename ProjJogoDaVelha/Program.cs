@@ -48,6 +48,7 @@
                 MostrarTabuleiro();
                 Console.ReadKey();
             }
+            Console.Clear();
 
         }
 
