@@ -48,7 +48,8 @@
                 MostrarTabuleiro();
                 Console.ReadKey();
             }
-            Console.Clear();
+            if(vitoria == false)
+                 Console.Clear();
 
         }
 
@@ -91,10 +92,10 @@
                 xOuO = 'X';
             return xOuO;
         }
-
+        
         string[,] EscolherPosicao(string posicao)
         {
-            Console.Write($"\nEscolha uma posição: \n");
+            Console.Write($"\nEscolha uma posição jogador {TrocarPeca(rodada)}: \n");
             posicao = Console.ReadLine().ToUpper().Trim();
 
             switch (posicao)
